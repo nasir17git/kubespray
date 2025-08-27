@@ -1,0 +1,15 @@
+# execution-environment.yml
+version: 3
+images:
+  base_image:
+    name: quay.io/ansible/awx-ee:latest   # 기존 AWX 기본 EE 베이스
+
+dependencies:
+  galaxy: collections/requirements.yml   # 포크 repo에 추가한 컬렉션 의존성
+  python: requirements.txt               # 필요 시 pip 패키지
+  # system: bindep.txt                   # 필요 시 시스템 패키지
+
+additional_build_steps:
+  prepend: |
+    # ansible-core를 최신 버전으로 교체
+    RUN pip install --no-cache-dir "ansible-core==2.17.4"
