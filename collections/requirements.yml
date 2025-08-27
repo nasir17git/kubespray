@@ -1,16 +1,15 @@
----
 collections:
   - name: ansible.utils
-    version: "2.11.0"        # ansible-core 2.15 호환
+    version: '>=2.5.0'
   - name: community.crypto
-    version: "2.16.2"        # 2.15까지 테스트됨
+    version: '>=2.22.3'
   - name: community.general
-    version: "7.4.0"         # ansible-core 2.15 지원 마지막 안정 버전
+    version: '>=7.0.0'
   - name: ansible.netcommon
-    version: "4.1.0"      # ✅ 2.15 호환 보장
+    version: '>=5.3.0'
   - name: ansible.posix
-    version: "1.5.4"         # 2.15에서도 안정
+    version: '>=1.5.4'
   - name: community.docker
-    version: "3.8.1"         # 2.15 호환
+    version: '>=3.11.0'
   - name: kubernetes.core
-    version: "2.4.0"         # 2.15 및 Kubespray 테스트 범위 내
+    version: '>=2.4.2'
