@@ -1,0 +1,7 @@
+plugin: community.general.nmap
+address: 172.21.19.0/24
+ports: 22
+strict: false
+all:
+  vars:
+    ansible_user: ansible
